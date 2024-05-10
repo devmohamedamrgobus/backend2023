@@ -10,5 +10,7 @@ $db = new db("localhost","root","","backend2023new","users");
 //    "password"=>12345
 //])->excute();
 
-echo "<pre>";
-print_r($db->select()->where("email","=","www@ww.com")->get());
+//echo "<pre>";
+//print_r($db->select()->where("email","=","ww@ww.coc")->Andwhere("name","=","ahmed")->get());
+
+$db->delete()->where("id","=",4)->excute();

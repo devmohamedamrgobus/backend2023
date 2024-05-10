@@ -48,7 +48,8 @@ class db implements dbContract
 
      public function delete()
     {
-        // TODO: Implement delete() method.
+        $this->sql = "DELETE FROM `$this->table` ";
+        return $this;
     }
 
     public function excute()
@@ -72,6 +73,18 @@ class db implements dbContract
     public function where($column,$operator,$value)
     {
         $this->sql .= " WHERE `$column` $operator '$value'";
+        return $this;
+    }
+
+    public function Andwhere($column,$operator,$value)
+    {
+        $this->sql .= " AND `$column` $operator '$value'";
+        return $this;
+    }
+
+    public function Orwhere($column,$operator,$value)
+    {
+        $this->sql .= " OR `$column` $operator '$value'";
         return $this;
     }
 }
