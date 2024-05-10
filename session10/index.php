@@ -13,4 +13,10 @@ $db = new db("localhost","root","","backend2023new","users");
 //echo "<pre>";
 //print_r($db->select()->where("email","=","ww@ww.coc")->Andwhere("name","=","ahmed")->get());
 
-$db->delete()->where("id","=",4)->excute();
+//$db->delete()->where("id","=",4)->excute();
+
+
+$db->update([
+    "name"=>"tamer",
+    "email"=>"e"
+])->where("id","=",5)->excute();

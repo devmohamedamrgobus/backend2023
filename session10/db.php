@@ -43,7 +43,16 @@ class db implements dbContract
 
      public function update($data)
     {
-        // TODO: Implement update() method.
+        $rows = "";
+
+        foreach ($data as $column => $value) {
+            $rows .= "`$column` = '$value',";
+        }
+        $rows = rtrim($rows,",");
+
+        $this->sql = "UPDATE $this->table SET $rows ";
+
+        return $this;
     }
 
      public function delete()
@@ -51,6 +60,7 @@ class db implements dbContract
         $this->sql = "DELETE FROM `$this->table` ";
         return $this;
     }
+    
 
     public function excute()
     {
