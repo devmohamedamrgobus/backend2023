@@ -63,6 +63,12 @@ class db implements dbContract
         return mysqli_fetch_all($query,MYSQLI_ASSOC);
     }
 
+    public function get()
+    {
+        $query =  mysqli_query($this->connection,$this->sql);
+        return mysqli_fetch_assoc($query);
+    }
+
     public function where($column,$operator,$value)
     {
         $this->sql .= " WHERE `$column` $operator '$value'";
