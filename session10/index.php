@@ -11,4 +11,4 @@ $db = new db("localhost","root","","backend2023new","users");
 //])->excute();
 
 echo "<pre>";
-print_r($db->select()->all());
+print_r($db->select("name")->where("id","=",5)->all());
