@@ -60,7 +60,28 @@ class db implements dbContract
         $this->sql = "DELETE FROM `$this->table` ";
         return $this;
     }
-    
+
+    public function join($type,$table,$pk,$fk){
+        $this->sql .= " $type JOIN `$table` ON $pk = $fk";
+        return $this;
+    }
+//    function innerJoin($table,$pk,$fk)
+//    {
+//        $this->join('inner',$table,$pk,$fk);
+//        return $this;
+//    }
+//
+//    function leftJoin($table,$pk,$fk)
+//    {
+//        $this->join('left',$table,$pk,$fk);
+//        return $this;
+//    }
+//
+//    function rightJoin($table,$pk,$fk)
+//    {
+//        $this->join('right',$table,$pk,$fk);
+//        return $this;
+//    }
 
     public function excute()
     {
