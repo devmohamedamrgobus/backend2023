@@ -1,0 +1,17 @@
+{
+    "name": "devmo/mvc",
+    "description": "mvc",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Devmo\\Mvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mohamed amr",
+            "email": "mohamed.amr@gobus-eg.com"
+        }
+    ],
+    "require": {}
+}

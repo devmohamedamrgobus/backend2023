@@ -1,0 +1,21 @@
+{
+    "name": "devmo/mvc",
+    "description": "mvc",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Devmo\\Mvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mohamed amr",
+            "email": "mohamed.amr@gobus-eg.com"
+        }
+    ],
+    "require": {
+        "filp/whoops": "^2.15",
+        "jenssegers/blade": "^1.4",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
