@@ -1,0 +1,6 @@
+<?php
+namespace Devmo\Mvc\controllers;
+class {name} extends controller
+{
+
+}
